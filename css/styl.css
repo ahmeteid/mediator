@@ -9,7 +9,7 @@
 :root {
     --head-color: #222048;
     --main-color: #2e2c66;
-    --buttom-color: #e1782c;
+    --buttom-color: #e0772b;
     --text-color: #fff;
     --main-box-shadow: 0 10px 20px rgba(46, 93, 234, 0.2);
     --main-transitio: .3s;
@@ -274,6 +274,55 @@ strong:hover {
 }
 
 /* End Category */
+
+/* Start Download Button */
+.btn-download {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    padding: 10px;
+    width: fit-content;
+    background-color: var(--buttom-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: var(--main-transitio);
+    -webkit-transition: var(--main-transitio);
+    -moz-transition: var(--main-transitio);
+    -ms-transition: var(--main-transitio);
+    -o-transition: var(--main-transitio);
+    animation: btn-download 3s linear infinite;
+    -webkit-animation: btn-download 3s linear infinite;
+}
+
+.btn-download:hover {
+    background-color: var(--text-color);
+    box-shadow: 0 0 20px rgba(225, 120, 44, .2);
+    border: 1px var(--buttom-color) solid;
+}
+
+.btn-download i {
+    color: var(--text-color);
+}
+
+.btn-download:hover i {
+    color: var(--buttom-color);
+}
+
+@keyframes btn-download {
+
+    0%,
+    100% {
+        bottom: 20;
+    }
+
+    50% {
+        bottom: 40px;
+    }
+}
+
+/* End Download Button */
 
 /* Start Footer */
 footer {
