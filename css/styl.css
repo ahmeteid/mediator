@@ -55,10 +55,24 @@ i {
     -moz-transition: var(--main-transitio);
     -ms-transition: var(--main-transitio);
     -o-transition: var(--main-transitio);
+    animation: change-backgrund 10s linear infinite;
+    -webkit-animation: change-backgrund 10s linear infinite;
 }
 
 .header:hover {
     box-shadow: var(--main-box-shadow);
+}
+
+@keyframes change-backgrund {
+
+    0%,
+    100% {
+        background-image: url(../images/header.jpg);
+    }
+
+    50% {
+        background-image: url(../images/header_2.jpg);
+    }
 }
 
 nav {
@@ -191,6 +205,78 @@ strong:hover {
 }
 
 /* End Strog */
+
+/* Start Swap Categories */
+.search-categories .container h2 {
+    text-align: start;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    margin-left: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--main-transitio);
+    -webkit-transition: var(--main-transitio);
+    -moz-transition: var(--main-transitio);
+    -ms-transition: var(--main-transitio);
+    -o-transition: var(--main-transitio);
+}
+
+.search-categories .container h2:hover {
+    color: var(--buttom-color);
+}
+
+.search-categories .container .s-categries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    transform: translateX(13%);
+}
+
+@media (max-width: 767px) {
+    .search-categories .container .s-categries {
+        transform: translateX(30%);
+    }
+}
+
+.search-categories .container .s-categries .category {
+    width: fit-content;
+}
+
+.search-categories .container .s-categries .category a {
+    color: var(--text-color);
+    padding: 10px 50px;
+    position: relative;
+
+}
+
+.search-categories .container .s-categries .category a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #222048;
+    z-index: -1;
+    transition: var(--main-transitio);
+    -webkit-transition: var(--main-transitio);
+    -moz-transition: var(--main-transitio);
+    -ms-transition: var(--main-transitio);
+    -o-transition: var(--main-transitio);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.search-categories .container .s-categries .category a:hover::before {
+    width: 100%;
+}
+
+
+
+/* End Swap Categories */
 
 
 /* Start Category */
